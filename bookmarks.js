@@ -9,7 +9,7 @@ const bookmarks = [
     ],
   },
   {
-    title: "Media",
+    title: "media",
     links: [
       { name: "youtube", url: "https://youtube.com" },
       { name: "music", url: "https://music.youtube.com" },
