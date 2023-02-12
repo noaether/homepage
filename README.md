@@ -1,7 +1,6 @@
-# [Homepage](https://danggoodcode.com/startpage)
+# [Homepage](https://home.noae.ca)
 
-![homepage](https://i.redd.it/cbnzq36zj3601.gif)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c0a4ed0b-0f4a-4a77-8cbe-49a56799ec11/deploy-status)](https://app.netlify.com/sites/noaether-home/deploys)
 ## Customization
 
 ### Customize Bookmarks
