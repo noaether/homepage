@@ -27,7 +27,9 @@
           <div id="temp" class="inline"></div>
           <div class="row">
             <div id="sunrise" class="inline"></div>
+            <div class="inline">-</div>
             <div id="wind" class="inline"></div>
+            <div class="inline">-</div>
             <div id="sunset" class="inline"></div>
           </div>
         </div>
@@ -88,11 +90,11 @@
               document.getElementById("weather-description").innerHTML =
                 json.description;
               document.getElementById("sunrise").innerHTML =
-                json.sunrise;
+                "↑" + json.sunrise;
               document.getElementById("wind").innerHTML =
                 json.wind + "km/h " + degreesToCardinal(json.winddeg);
               document.getElementById("sunset").innerHTML =
-                json.sunset;
+                "↓" + json.sunset;
             } else {
               console.log("error msg: " + xhr.status);
             }
