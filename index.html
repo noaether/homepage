@@ -88,11 +88,11 @@
               document.getElementById("weather-description").innerHTML =
                 json.weather[0].description;
               document.getElementById("sunrise").innerHTML =
-                getTime(json.sys.sunrise);
+                convertToTime(json.sys.sunrise);
               document.getElementById("wind").innerHTML =
                 json.wind.speed + "km/h " + degreesToCardinal(json.wind.deg);
               document.getElementById("sunset").innerHTML =
-                getTime(json.sys.sunset);
+                convertToTime(json.sys.sunset);
             } else {
               console.log("error msg: " + xhr.status);
             }
