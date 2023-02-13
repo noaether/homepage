@@ -77,22 +77,22 @@
         // Request to open weather map
         xhr.open(
           "GET",
-          "https://api.openweathermap.org/data/2.5/weather?id=6077246&units=metric&appid=e5b292ae2f9dae5f29e11499c2d82ece"
+          "https://noaether-cdn.netlify.app/.netlify/functions/weatherapi"
         );
         xhr.onload = () => {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
               let json = JSON.parse(xhr.responseText);
               document.getElementById("temp").innerHTML =
-                json.main.temp.toFixed(0) + " C";
+                json.temp.toFixed(0) + " C";
               document.getElementById("weather-description").innerHTML =
-                json.weather[0].description;
+                json.description;
               document.getElementById("sunrise").innerHTML =
-                convertToTime(json.sys.sunrise);
+                json.sunrise;
               document.getElementById("wind").innerHTML =
-                json.wind.speed + "km/h " + degreesToCardinal(json.wind.deg);
+                json.wind + "km/h " + degreesToCardinal(json.winddeg);
               document.getElementById("sunset").innerHTML =
-                convertToTime(json.sys.sunset);
+                json.sunset;
             } else {
               console.log("error msg: " + xhr.status);
             }
