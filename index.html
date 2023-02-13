@@ -40,6 +40,16 @@
           window.open(searchUrl + val);
         }
       }
+      function convertToTime(msSinceEpoch) {
+        var date = new Date(msSinceEpoch);
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        return hours + ":" + minutes;
+      }
+      function degreesToCardinal(degrees) {
+        var cardinals = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+        return cardinals[Math.floor((degrees + 22.5) / 45) % 8];
+      }
       // Get current time and format
       function getTime() {
         let date = new Date(),
@@ -72,6 +82,12 @@
                 json.main.temp.toFixed(0) + " C";
               document.getElementById("weather-description").innerHTML =
                 json.weather[0].description;
+              document.getElementById("sunrise").innerHTML =
+                getTime(json.sys.sunrise);
+              document.getElementById("wind").innerHTML =
+                json.wind.speed + "km/h " + degreesToCardinal(json.wind.deg);
+              document.getElementById("sunset").innerHTML =
+                getTime(json.sys.sunset);
             } else {
               console.log("error msg: " + xhr.status);
             }
