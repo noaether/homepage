@@ -4,7 +4,7 @@ const bookmarks = [
     title: "planning",
     links: [
       { name: "calendar", url: "https://calendar.google.com/calendar/u/0/r/week?autorel=1" },
-      { name: "studyo", url: "https://studyo.app/c/63093be8b87df182ae983156/a/63093be8b87df182ae98315f/agenda/daily" },
+      { name: "today", url: "https://today.studyo.app/p/64cd95908e0ffcb7a9c208a8/home" },
       { name: "keep", url: "https://keep.google.com/u/0/" },
     ],
   },
